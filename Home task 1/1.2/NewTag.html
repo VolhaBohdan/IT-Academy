@@ -1,19 +1,141 @@
 <!DOCTYPE html> 
 <html lang="ru">
-    <head>
-        <title>1.2+</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-<h2>Изучение тегов</h2>
+<head>
+    <title>1.2+</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Изучение тегов</h1>
 <div> 
-        <ol> 
-            <li>Тег, который используется для выделения в тексте цитат - это тег &lt;q&gt;</li>
-            <strong>Пример:</strong> <q>Жизнь слишком коротка, чтобы пить плохие вина</q> - Иоганн Вольфганг Гёте.
-
-            
+    <ol> 
+        <li><p>Тег, который используется для выделения в тексте цитат - это тег <a href="http://htmlbook.ru/html/q" target="_blank"><b>&lt;q&gt;</b></a></p><br>
+        <p><b>Пример для написания кода:</b> &lt;q&gt; Жизнь слишком коротка, чтобы пить плохие вина &lt;/q&gt; - Иоганн Вольфганг Гёте.<br>
+        <strong>Пример, как cодержимое контейнера автоматически отображается в браузере в кавычках:</strong><br> 
+        <q><em>Жизнь слишком коротка, чтобы пить плохие вина</em></q> - Иоганн Вольфганг Гёте.<br></p></li>
+        
+        <li><p>Если вам необходимо создать список определений, воспользуйтесь тегом <a href="http://htmlbook.ru/html/dl" target="_blank"><b>&lt;dl&gt;</b></a>, который входит в тройку элементов &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;.</p>
+        <strong>Пример:</strong><br>
+        &lt;dl&gt;<br> 
+        &lt;dt&gt;День победы&lt;/dt&gt;<br>
+        &lt;dd&gt;День Победы — праздник победы Красной Армии и советского народа над нацистской Германией в Великой Отечественной войне 1941—1945 годов.&lt;/dd&gt;<br>
+        &lt;/dl&gt;<br>
+        <strong>Пример отображения в браузере:</strong><br>
+        <dl>
+            <dt>День победы</dt>
+            <dd>День Победы — праздник победы Красной Армии и советского народа над нацистской Германией в Великой Отечественной войне 1941—1945 годов.<br></dd>
+            <dt>День независимости Республики Беларусь</dt>
+            <dd>День Независимости Республики Беларусь - главный праздник белорусской государственности, отмечается ежегодно 3 июля.</dd>
+        </dl></li>
+        <li><p>Элемент <a href="http://htmlbook.ru/html/pre" target="_blank"><b>&lt;pre&gt;</b></a> определяет блок предварительно форматированного текста.<br> 
+                Такой текст отображается обычно моноширинным шрифтом и со всеми пробелами между словами.<br>
+                По умолчанию, любое количество пробелов идущих в коде подряд, на веб-странице показывается как один.<br> 
+                Тег &lt;pre&gt; позволяет обойти эту особенность и отображать текст как требуется разработчику.</p>
+      
+        <strong>Пример:</strong> 
+        &lt;pre&gt; 
+                Время —
+                        начинаю
+                                про Ленина рассказ.
+                Но не потому,
+                        что горя
+                                нету более,
+                время
+                    потому,
+                                что резкая тоска
+                стала ясною
+                                осознанною болью.
+        &lt;/pre&gt;<br> 
+        <strong>Пример отображения в браузере:</strong><br>
+               <pre> 
+                Время —
+                        начинаю
+                                про Ленина рассказ.
+                Но не потому,
+                        что горя
+                                нету более,
+                время
+                        потому,
+                                что резкая тоска
+                стала ясною
+                                осознанною болью.
+                </pre></li> 
+            <li><p>Тег <a href="http://htmlbook.ru/html/code" target="_blank"><b>&lt;code&gt;</b></a>предназначен для отображения одной или нескольких строк текста, который представляет собой программный код.<br>
+            Сюда относятся имена переменных, ключевые слова, тексты функции и т.д.<br>
+            Браузеры обычно отображают содержимое контейнера &lt;code&gt; как моноширинный текст уменьшенного размера.<br>
+            Важно!!! В отличие от тега &lt;pre&gt; дополнительные пробелы внутри контейнера &lt;code&gt; не учитываются, так же, как и переносы текста.<br>
+            Поэтому используйте тег &lt;br&gt; или &lt;p&gt; для создания переносов.</p>
+            <strong>Пример для HTML:</strong>
+        &lt;code&gt; &lt;span style="text-decoration:underline"&gt;Пример&lt;/span&gt;&lt;/code&gt;<br>
+        <strong>Пример отображения в браузере:</strong><br>
+        <code><span style="text-decoration:underline">Пример</span></code><br>
+        Вывод: Тег &lt;code&gt; не используется в HTML. <br>
+        А вот пример для использования данного тега в JavaScript:<br>
+        &lt;code&gt;var faq = new Array(3)&lt;/code&gt; отображается в браузере: <code>var faq = new Array(3)</code></li>   
+        <li><p>Контейнер<a href="http://htmlbook.ru/html/tt" target="_blank"><b>&lt;tt&gt;</b></a> отображает текст моноширинным текстом. Этот тег относится к группе тегов физического форматирования.</p>
+         <strong>Пример:</strong>&lt;tt&gt;Текст имитирует шрифт пишущей машинки.&lt;tt&gt;<br>
+        <strong>Пример отображения в браузере:</strong><br>
+        <tt>Текст имитирует шрифт пишущей машинки.</tt><br></li>
+        <li><p>Тег &lt;kbd&gt; используется для обозначения текста, который набирается на клавиатуре или для названия клавиш.<br> 
+        Браузеры обычно помечают текст в контейнере &lt;kbd&gt; моноширинным шрифтом.</p>
+        <strong>Пример:</strong><a href="http://htmlbook.ru/html/kbd" target="_blank"><b> &lt;kbd&gt; </b></a>
+        &lt;Alt&gt;+&lt;Delete&gt;&lt;/kbd&gt; <br>
+        <strong>Пример отображения в браузере:</strong><kbd>&lt;Alt&gt;+&lt;Delete&gt;</kbd></li>
+        <li><p>Тег &lt;var&gt; используется для выделения переменных компьютерных программ. Браузеры обычно помечают текст в контейнере &lt;var&gt; курсивным начертанием.</p>
+        <strong>Пример:</strong> В данном примере делается запрос к базе данных для получения поля &lt;var&gt;content_title&lt;/var&gt; 
+        из таблицы &lt;var&gt;content&lt;/var&gt;, причем должно удовлетворяться условие &lt;code&gt;section_id = 1&lt;/code&gt;.<br>
+        <strong>Пример отображения в браузере:</strong> В данном примере делается запрос к базе данных для получения поля <var>content_title</var> 
+        из таблицы <var>content</var>, причем должно удовлетворяться условие <code>section_id = 1</code>.</li>
+        <li><p>Теги<a href="http://htmlbook.ru/html/sub" target="_blank"><b>&lt;sub&gt;</b></a> и <a href="http://htmlbook.ru/html/sup" target="_blank"><b>&lt;sup&gt;</b></a> отображают шрифт в виде нижнего и верхнего индексов соответственно.</p>
+        <strong>Пример:</strong> Под действием гидроксиламина альдегиды превращаются в оксимы:<br>
+        СН&lt;sub&gt;3&lt;/sub&gt;СНО + NH&lt;sub&gt;2&lt;/sub&gt;OH = 
+        CH&lt;sub&gt;3&lt;/sub&gt;C(=NOH)H + H&lt;sub&gt;2&lt;/sub&gt;O
+        <p><strong>Пример отображения в браузере:</strong> Под действием гидроксиламина альдегиды превращаются в оксимы: 
+        СН<sub>3</sub>СНО + NH<sub>2</sub>OH = 
+        CH<sub>3</sub>C(=NOH)H + H<sub>2</sub>O
+        </p>
+        <strong>Пример:</strong> &lt;i&gt;X&lt;sup&gt;&lt;small&gt;n&lt;/small&gt;&lt;/sup&gt; + Y &lt;sup&gt;&lt;small&gt;n&lt;/small&gt;&lt;/sup&gt; 
+        = Z &lt;sup&gt;&lt;small&gt;n&lt;/small&gt;&lt;/sup&gt;&lt;/i&gt;
+        <p><strong>Пример отображения в браузере:</strong> <i>X<sup><small>n</small></sup> + Y <sup><small>n</small></sup> 
+        = Z <sup><small>n</small></sup></i>
+        </p></li>
+        <li><p>Тег <a href="http://htmlbook.ru/html/blockquote" target="_blank"> <b>&lt;blockquote&gt;</b></a> предназначен для выделения длинных цитат внутри документа.<br>
+        Текст, обозначенный этим тегом, традиционно отображается как выровненный блок с отступами слева и справа (примерно по 40 пикселов), а также с отбивкой сверху и снизу.</p>
+        <strong>Пример:</strong> &lt;blockquote&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+        sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat 
+        volutpat. Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper 
+        suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+        &lt;/blockquote&gt;
+        <p><strong>Пример отображения в браузере:</strong>
+        </p>
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+        sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat 
+        volutpat. Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper 
+        suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    </blockquote></li>
+        <li><p>Теги <a href="http://htmlbook.ru/html/ins" target="_blank"><b>&lt;ins&gt;</b></a> и <a href="http://htmlbook.ru/html/del" target="_blank"><b>&lt;del&gt;</b></a> предназначены для выделения текста, который был добавлен в новую версию документа, <br>
+        а также для выделения текста, который был удален в новой версии документа соответственно.</p>
+        <strong>Пример:</strong>
+        <p>Заметим, что схожий результат с Netscape показывает и браузер Opera,<br> но, как видно на рис. 1, в последующих версиях
+            &lt;del>&gt;этот недостаток был устранен&lt;/del&gt; &lt;ins&gt;подход разработчиков 
+            этого браузера был изменен&lt;/ins&gt;.
+        </p>
+        <strong>Пример отображения в браузере:</strong>
+        <p>Заметим, что схожий результат с Netscape показывает и браузер Opera,<br> но, как видно на рис. 1, в последующих версиях
+        <del>этот недостаток был устранен</del> <ins>подход разработчиков 
+        этого браузера был изменен</ins>.
+        </p></li>
+       <li><p>Тег &lt;nobr&gt;уведомляет браузер отображать текст без переносов. </p>
+        Пример использования можно посмотреть <a href="http://htmlbook.ru/html/nobr" target=_blank>здесь</a>.</li>
+        <li><p>Тег &lt;wbr&gt; указывает браузеру место, где допускается делать перенос строки в тексте, если этого требует ширина родительского элемента.</p>
+        Пример использования можно посмотреть <a href="http://htmlbook.ru/html/wbr" target=_blank>здесь</a>.</li>
+        <li><p>Тег <a href="http://htmlbook.ru/html/address" target="_blank"><b>&lt;address&gt;</b></a> предназначен для хранения информации об авторе и может включать в себя любые элементы HTML вроде ссылок, текста, выделений и т.д.</p>
+        <strong>Пример:</strong> Контактные данные: &lt;address&gt;tel: +375291264082&lt;/address&gt;<br>
+        <p><strong>Пример отображения в браузере:</strong>
+        </p> 
+        Контактные данные:<address>tel: +375291264082</address> Богдан Ольга</li>
+    </ol>
 </div>
-
-
-    </body>
+</body>
 </html>
